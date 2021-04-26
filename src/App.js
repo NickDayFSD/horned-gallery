@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import './App.css';
 import React from 'react';
-import hornies from './data';
+import images from './data';
 import Header from './Header';
 import Footer from './Footer';
-import HornedList from './ImageList';
+import ImageList from './ImageList';
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
         <Header />
 
         <main>
-          <HornedList hornies={hornies} />
+          <ImageList images={images} />
         </main>
 
         <Footer />

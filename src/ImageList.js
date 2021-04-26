@@ -4,15 +4,14 @@ import ImageItem from './ImageItem';
 class ImageList extends Component {
 
   render() {
+    const images = this.props.images;
 
+    console.log(images);
     return (
       <ul className='ImageList'>
-        <li>Horny Critter</li>
-        <li>Horny Critter</li>
-        <li>Horny Critter</li>
-        <li>Horny Critter</li>
-        <li>Horny Critter</li>
-        <li>Horny Critter</li>
+        {images.map(image => (
+          <ImageItem key={image.name} image={image} />
+        ))}
       </ul>
     );
   }

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
-class HornedItem extends Component {
+class ImageItem extends Component {
 
   render() {
-    const horned = this.props.horned;
+    const image = this.props.image;
 
     return (
       <li className='HornedItem'>
-        <h2>{horned.name}</h2>
-        <img src={horned.url} alt={horned.description} />
-        <p>Horn Count: {horned.horns}</p>
+        <h2>{image.name}</h2>
+        <img src={image.url} alt={image.description} />
+        <p>Horn Count: {image.horns}</p>
       </li>
     );
   }
 }
 
-export default HornedItem;
+export default ImageItem;
