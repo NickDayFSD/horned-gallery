@@ -4,7 +4,7 @@ import React from 'react';
 import hornies from './data';
 import Header from './Header';
 import Footer from './Footer';
-import HornedList from './HornedList';
+import HornedList from './ImageList';
 
 class App extends Component {
 
