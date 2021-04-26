@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HornedItem from './HornedItem';
 
 class HornedList extends Component {
 
