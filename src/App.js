@@ -5,6 +5,7 @@ import images from './data';
 import Header from './Header';
 import Footer from './Footer';
 import ImageList from './ImageList';
+import './App.css';
 
 class App extends Component {
 
