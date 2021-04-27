@@ -9,8 +9,9 @@ export default class ImageSearch extends Component {
         <input />
 
         <select>
-          <option value="">sort by</option>
-          <option value="many horns"></option>
+          <option value="">Text Filter</option>
+          <option value="name">Name Order</option>
+          <option value="horns">Horns Order</option>
         </select>
 
         <button>Search</button>
