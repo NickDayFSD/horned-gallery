@@ -5,6 +5,8 @@ import images from './data';
 import Header from './Header';
 import Footer from './Footer';
 import ImageList from './ImageList';
+import Counter from './Counter';
+import ImageSearch from './ImageSearch';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +15,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+
+        <Counter />
+
+        <ImageSearch />
 
         <main>
           <ImageList images={images} />

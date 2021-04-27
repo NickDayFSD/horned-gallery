@@ -1,0 +1,19 @@
+.ImageSearch {
+  background: chocolate;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ImageSearch input {
+  width: 200px;
+  height: 50px;
+  outline: 0;
+}
+
+.ImageSearch select {
+  width: 200px;
+}
