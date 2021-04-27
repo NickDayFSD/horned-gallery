@@ -19,9 +19,14 @@ export default class ImageSearch extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('this is the state: ' + this.state);
-
     this.props.onSearch(this.state);
+  }
+
+  // secret sauce
+  componentDidUpdate(prevProp, prevState) {
+    if (prevState !== this.state) {
+      this.props.onSearch(this.state);
+    }
   }
 
   render() {
