@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <Header />
 
-        <ImageSearch />
+        <ImageSearch onSearch={this.handleSearch} />
 
         <main>
           <ImageList images={images} />

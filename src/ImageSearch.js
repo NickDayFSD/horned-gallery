@@ -2,21 +2,51 @@ import { Component } from 'react';
 import './ImageSearch.css';
 
 export default class ImageSearch extends Component {
+  // initialize state here
+  state = {
+    nameFilter: '',
+    sortField: ''
+  }
+
+  handleNameChange = ({ target }) => {
+    this.setState({ nameFilter: target.value });
+  }
+
+  handleSearchChange = ({ target }) => {
+    this.setState({ sortField: target.value });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log('this is the state: ' + this.state);
+
+    this.props.onSearch(this.state);
+  }
 
   render() {
-    return (
-      <form className="ImageSearch">
-        <input />
+    const { nameFilter, sortField } = this.state;
 
-        <select>
+    return (
+      <form className="ImageSearch" onSubmit={this.handleSubmit}>
+        <input
+          name='nameFilter'
+          value={nameFilter}
+          onChange={this.handleNameChange}
+        />
+
+        <select
+          name='sortField'
+          value={sortField}
+          onChange={this.handleSearchChange}
+        >
           <option value="">Text Filter</option>
-          <option value="name">Name Order</option>
-          <option value="horns">Horns Order</option>
+          <option value="title">by Name</option>
+          <option value="horns">by Horns</option>
         </select>
 
         <button>Search</button>
       </form>
     );
   }
-
 }

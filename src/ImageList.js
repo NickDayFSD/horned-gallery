@@ -7,7 +7,6 @@ class ImageList extends Component {
   render() {
     const images = this.props.images;
 
-    console.log(images);
     return (
       <ul className='ImageList'>
         {images.map(image => (
